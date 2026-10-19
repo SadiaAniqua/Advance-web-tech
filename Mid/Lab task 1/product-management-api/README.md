@@ -1,3 +1,13 @@
+# Product Management API
+
+NestJS REST API for a small shop: manages **products** and **employees** with PostgreSQL (TypeORM).
+
+## Student Details
+
+| Name | ID | Section |
+|------|----|---------|
+| Sadia Aniqua |  23-53179-3 |  D |
+
 # Krown Dex Backend – Setup & Run Guide
 
 ````bash
@@ -114,20 +124,40 @@ npm run start:prod
 
 ```
 
-# 📁 Project Structure (Overview)
+## 📁 Project Structure
 
 ```bash
-/project-root
+/product-management-api
   ├─ src/
   │   ├─ modules/
-  │   ├─ common/
-  │   ├─ config/
-  │   ├─ main.ts
-  │   └─ app.module.ts
-  ├─ migrations/
-  ├─ test/
-  ├─ .env.example
+  │   │   ├─ product/
+  │   │   │   ├─ dto/product.dto.ts
+  │   │   │   ├─ entities/product.entity.ts
+  │   │   │   ├─ product.controller.ts
+  │   │   │   ├─ product.module.ts
+  │   │   │   └─ product.service.ts
+  │   │   └─ employee/
+  │   │       ├─ dto/employee.dto.ts
+  │   │       ├─ entities/employee.entity.ts
+  │   │       ├─ employee.controller.ts
+  │   │       ├─ employee.module.ts
+  │   │       └─ employee.service.ts
+  │   ├─ database/
+  │   │   └─ migrations/        # creates the products and employees tables
+  │   ├─ providers/
+  │   │   └─ database/postgres/ # PostgreSQL connection setup
+  │   ├─ config/                # environment and database configuration
+  │   ├─ common/                # shared helpers, pipes, guards
+  │   ├─ script/                # migration run / rollback scripts
+  │   ├─ main.ts                # app entry point
+  │   └─ app.module.ts          # root module
+  ├─ screenshots/               # Postman screenshots (01 to 07)
+  ├─ .env.example               # sample database settings
+  ├─ .gitignore
+  ├─ nest-cli.json
   ├─ package.json
-  └─ tsconfig.json
-
+  ├─ package-lock.json
+  ├─ tsconfig.json
+  └─ README.md
+```
 ```
