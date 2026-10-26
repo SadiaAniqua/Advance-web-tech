@@ -1,6 +1,6 @@
-# Product Management API
+# Antiqo API
 
-NestJS REST API for a small shop: manages **products** and **employees** with PostgreSQL (TypeORM).
+NestJS REST API for a small shop: manages **users** and **products** with PostgreSQL (TypeORM).
 
 ## Student Details
 
