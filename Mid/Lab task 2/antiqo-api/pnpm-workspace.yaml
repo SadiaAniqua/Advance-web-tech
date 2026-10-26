@@ -1,0 +1,16 @@
+
+allowBuilds:
+  '@parcel/watcher': false
+  '@scarf/scarf': false
+  '@swc/core': false
+  argon2: false
+  msgpackr-extract: false
+  unrs-resolver: false
+
+permissions:
+  dotenv:
+    skills: true
+
+skills:
+  dirs:
+    - .claude/skills
